@@ -1,14 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow} from 'enzyme';
+import App from 'components/App';
+import CommentBox from 'components/CommentBox';
+import CommentList from 'components/CommentList';
 
-import App from '../App';
+let wrapper;
+beforeEach(()=>{
+  wrapper = shallow(<App />);
+});
 
-it ('Shows a comment box', ()=>{
-  const div = document.createElement('div');
-  ReactDOM.render(<App/>,div);
+it ('Shows one instance of  comment box component', ()=>{
+expect(wrapper.find(CommentBox).length).toEqual(1);
 
-  expect (div.innerHTML).toContain('I am Component Box');
-  expect (div.innerHTML).toContain('I am Component List');
+});
 
-  ReactDOM.unmountComponentAtNode(div);
+it ('shows one instance of comment List component',()=>{
+  expect(wrapper.find(CommentList).length).toEqual(1);
 });
