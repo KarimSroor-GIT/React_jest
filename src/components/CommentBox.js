@@ -17,7 +17,7 @@ handleSubmit = (event)=>{
 
 render(){
   return(
-<form>
+<form onSubmit ={this.handleSubmit}>
 <h4>Add A New Comment</h4>
 <textarea onChange={this.handleChange} value= {this.state.comment}></textarea>
 <div>
