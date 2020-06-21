@@ -4,6 +4,7 @@ import CommentList from 'components/CommentList';
 
 export default ()=>{
 return (
+
 <div>
 <CommentBox/>
 <CommentList/>
