@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
 
-class commentList extends Component {
+class CommentList extends Component {
 
   renderComments()
   {
@@ -25,4 +25,4 @@ class commentList extends Component {
 function mapStateToProps(state){
 return {comments:state.comments}
 }
-export default connect(mapStateToProps,null)(commentList);
+export default connect(mapStateToProps,null)(CommentList);
